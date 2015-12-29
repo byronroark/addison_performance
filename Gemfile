@@ -6,6 +6,7 @@ gem 'rails', '4.2.4'
 # Authentication
 gem 'devise'
 gem 'devise-bootstrap-views'
+gem 'dotenv-rails'
 # File Uploads
 gem 'refile', require: 'refile/rails'
 gem 'refile-mini_magick'
