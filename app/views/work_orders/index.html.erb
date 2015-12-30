@@ -1,0 +1,39 @@
+<div class="row">
+    <div class="col-lg-12">
+        <h1 class="page-header">
+            Items <%= link_to 'Add Work Order', new_work_order_path, class: "btn btn-info" %>
+        </h1>
+        <ol class="breadcrumb square">
+            <li><%= link_to 'Dashboard', dashboard_path %></li>
+            <li class="active">Work Orders</li>
+        </ol>
+    </div>
+</div>
+<div class="row">
+  <div class="col-lg-6">
+    <div id='search-header'>
+      <%= render 'search_header' %>
+    </div>
+  </div>
+</div>
+<div class="row">
+  <div class="col-lg-12 col-md-12 col-sm-12">
+    <div class="panel panel-default panel-table">
+      <div class="panel-body">
+        <table id="table_id" class="table table-striped">
+          <thead>
+            <tr>
+              <th>Customer Name</th>
+              <th>Start City</th>
+              <th>End City</th>
+              <th colspan="2"></th>
+            </tr>
+          </thead>
+          <tbody id="item_list">
+            <%= render @work_orders %>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>
