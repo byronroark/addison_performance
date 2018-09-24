@@ -1,0 +1,23 @@
+<tr>
+  <td class="work-orders-list">
+    <%= link_to work_order do %>
+    <%= work_order.make %>
+    <% end %>
+  </td>
+  <td>
+    <%= work_order.start_city %>, <%= work_order.start_state %> <%= work_order.start_zip %>
+  </td>
+  <td>
+    <%= work_order.end_city %>, <%= work_order.end_state %> <% work_order.end_zip %>
+  </td>
+  <td>
+    <div class="btn-toolbar" role="toolbar">
+      <%= button_to edit_work_order_path(work_order), method: :get, class: "btn btn-sm btn-default" do %>
+      <i class="fa fa-pencil"></i>
+      <% end %>
+      <%= button_to work_order, method: :delete, class: "btn btn-sm btn-default", data: { confirm: "Are you sure you want to delete this work order?" } do %>
+      <i class="fa fa-times"></i>
+      <% end %>
+    </div>
+  </td>
+</tr>

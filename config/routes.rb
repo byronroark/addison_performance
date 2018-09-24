@@ -6,7 +6,6 @@ Rails.application.routes.draw do
   get '/contact_us', to: 'pages#contact', as: :contact
   get '/services', to: 'pages#services', as: :services
   get '/admins/sign_in', to: 'devise/sessions#new', as: :login
-  get '/dashboard', to: 'dashboard#index', as: :dashboard
 
   resources :work_orders
 end
